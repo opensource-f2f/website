@@ -40,7 +40,7 @@ const handleClick = () => {
 
     <episode-meta :info="info" />
 
-    <span font-400 text-15px>
+    <span font-400 text-15px line-clamp-5>
       {{ info.description }}
     </span>
   </div>
