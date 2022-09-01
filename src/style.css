@@ -1,0 +1,6 @@
+:root {
+  --header-bg: linear-gradient(180deg, #b7dca7 0%, rgba(183, 220, 167, 0) 100%);
+  --border-color: #e4e7ed;
+  --text-color: #333;
+  --brand-color: #c3e1b5;
+}

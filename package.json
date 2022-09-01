@@ -1,0 +1,39 @@
+{
+  "name": "opensource-f2f-website",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.ts,.vue ."
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.1.1",
+    "@vueuse/head": "^0.7.9",
+    "date-fns": "^2.29.2",
+    "github-markdown-css": "^5.1.0",
+    "vite-ssg": "^0.20.2",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.1.7",
+    "@sxzz/eslint-config": "^2.4.1",
+    "@types/node": "^18.7.14",
+    "@unocss/reset": "^0.45.13",
+    "@unocss/transformer-directives": "^0.45.13",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/runtime-core": "^3.2.38",
+    "eslint": "^8.23.0",
+    "typescript": "^4.6.4",
+    "unocss": "^0.45.13",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.4",
+    "vite": "^3.0.7",
+    "vite-plugin-pages": "^0.25.0",
+    "vite-plugin-vue-markdown": "^0.21.1",
+    "vue-tsc": "^0.39.5"
+  }
+}
