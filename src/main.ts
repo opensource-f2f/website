@@ -21,7 +21,7 @@ const routes: RouteRecordRaw[] = [
 for (const { id } of getAllEpisode()) {
   routes.push({
     name: `Episode${id}`,
-    path: `/episode/${id}`,
+    path: `/episode/${id}${import.meta.env.PROD ? '.html' : ''}`,
     component: h(EpisodeContent, { id }),
   })
 }

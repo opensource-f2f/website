@@ -12,7 +12,7 @@ const { info } = defineProps<{
 const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 
 const handleClick = () => {
-  router.push({ path: `/episode/${info.id}` })
+  router.push({ name: `Episode${info.id}` })
 }
 </script>
 
