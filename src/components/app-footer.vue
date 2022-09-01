@@ -1,5 +1,5 @@
 <template>
-  <div text-center py-4>
+  <div text-center py-6>
     <p text-sm>
       Designed by
       <a href="https://pan.icu/" target="_blank">内核恐慌</a>,

@@ -7,7 +7,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import 'github-markdown-css/github-markdown-light.css'
+import 'github-markdown-css'
 import './style.css'
 
 const routes: RouteRecordRaw[] = [
