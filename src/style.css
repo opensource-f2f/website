@@ -1,17 +1,20 @@
 :root {
-  --header-bg: linear-gradient(180deg, #B7DCA7 0%, rgba(183, 220, 167, 0) 100%);
+  --header-bg: linear-gradient(180deg, #b7dca7 0%, rgba(183, 220, 167, 0) 100%);
   --border-color: #e4e7ed;
   --text-color: #333;
   --brand-color: #c3e1b5;
-  --body-bg:#ffffff;
-}
-
-html,body {
-  height: 100%;
+  --bg: #ffffff;
 }
 
 .dark {
   --border-color: #414243;
   --text-color: #fff;
-  --body-bg: #141414;
+  --bg: #141414;
+
+  color-scheme: dark;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg);
 }

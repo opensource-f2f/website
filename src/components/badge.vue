@@ -2,7 +2,6 @@
 
 <template>
   <span
-    class="badge"
     flex="~ row gap-1"
     items-center
     justify-center
@@ -11,16 +10,11 @@
     text-xs
     font-400
     border-rounded
-    important-dark:bg-emerald-600
+    bg="[var(--brand-color)]"
+    dark:bg="#3E6B27"
+    text="[var(--text-color)]"
   >
     <slot name="icon" />
     <slot />
   </span>
 </template>
-
-<style scoped>
-.badge {
-  background-color: var(--brand-color);
-  color: var(--text-color);
-}
-</style>
