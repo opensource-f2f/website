@@ -34,9 +34,13 @@ const handleClick = () => {
       </span>
     </div>
 
-    <h2 text-20px font-500 cursor-pointer @click="handleClick">
-      {{ info.title }}
-    </h2>
+    <h2
+      text="20px center"
+      font-500
+      cursor-pointer
+      @click="handleClick"
+      v-html="info.title"
+    />
 
     <episode-meta :info="info" />
 
