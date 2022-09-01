@@ -21,7 +21,7 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/core'],
       dirs: [path.resolve(pathSrc, 'composables')],
-      dts: path.resolve(pathSrc, 'typings/components.d.ts'),
+      dts: path.resolve(pathSrc, 'typings/auto-import.d.ts'),
     }),
     UnoCSS(),
   ],
