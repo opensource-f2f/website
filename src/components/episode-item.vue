@@ -57,6 +57,7 @@ const handleClick = () => {
 <style scoped>
 .episode-item {
   border: 1px dashed var(--border-color);
+  margin: 0px -1px -1px 0px;
 }
 .title {
   color: --var(text-color);
