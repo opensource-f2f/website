@@ -11,6 +11,7 @@
     text-xs
     font-400
     border-rounded
+    important-dark:bg-emerald-600
   >
     <slot name="icon" />
     <slot />
