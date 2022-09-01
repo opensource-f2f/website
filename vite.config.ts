@@ -16,7 +16,6 @@ export default defineConfig({
       reactivityTransform: true,
     }),
     Markdown(),
-    Pages(),
     Components({
       dts: path.resolve(pathSrc, 'typings/components.d.ts'),
     }),

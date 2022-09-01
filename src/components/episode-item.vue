@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
 import { useRouter } from 'vue-router'
-import type { EpisodeInfo } from '../typings/types'
+import type { Episode } from '../typings/types'
 
 const router = useRouter()
 
 const { info } = defineProps<{
-  info: EpisodeInfo
+  info: Episode
 }>()
 
 const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
