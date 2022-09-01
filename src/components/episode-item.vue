@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
 import { useRouter } from 'vue-router'
-import type { Episode } from '../typings/types'
+import type { Episode } from '../utils/episode'
 
 const router = useRouter()
 
@@ -22,8 +22,8 @@ const handleClick = () => {
     max-w-480px
     flex="~ col gap-2 1"
     items-center
-    px-4
-    py-6
+    px-6
+    py-4
     class="episode-item"
   >
     <div flex="~" justify-between w-full font-mono>
@@ -37,16 +37,8 @@ const handleClick = () => {
     <h2 text-20px font-500 cursor-pointer @click="handleClick">
       {{ info.title }}
     </h2>
-    <div flex="~ row gap-2">
-      <badge>
-        <template #icon><div i-carbon-user-speaker /></template>
-        {{ info.hosts.join(', ') }}
-      </badge>
-      <badge>
-        <template #icon><div i-carbon-user-multiple /></template>
-        {{ info.guests.join(', ') }}
-      </badge>
-    </div>
+
+    <episode-meta :info="info" />
 
     <span font-400 text-15px>
       {{ info.description }}
