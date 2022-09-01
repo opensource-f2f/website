@@ -18,9 +18,9 @@ const handleClick = () => {
 
 <template>
   <div
-    min-w-120px
+    min-w-300px
     max-w-480px
-    flex="~ col gap-2"
+    flex="~ col gap-2 1"
     items-center
     px-4
     py-6
@@ -34,7 +34,7 @@ const handleClick = () => {
       </span>
     </div>
 
-    <h2 class="title" text-20px font-500 cursor-pointer @click="handleClick">
+    <h2 text-20px font-500 cursor-pointer @click="handleClick">
       {{ info.title }}
     </h2>
     <div flex="~ row gap-2">
@@ -48,7 +48,7 @@ const handleClick = () => {
       </badge>
     </div>
 
-    <span class="description" font-400 text-15px>
+    <span font-400 text-15px>
       {{ info.description }}
     </span>
   </div>
@@ -58,11 +58,5 @@ const handleClick = () => {
 .episode-item {
   border: 1px dashed var(--border-color);
   margin: 0px -1px -1px 0px;
-}
-.title {
-  color: --var(text-color);
-}
-.description {
-  color: var(--text-color);
 }
 </style>
