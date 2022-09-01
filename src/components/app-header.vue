@@ -17,6 +17,7 @@ const toggleDark = useToggle(isDark)
       right-5
       top-5
       i="dark:carbon-moon carbon-sun"
+      text="black 2xl"
       @click="toggleDark()"
     />
   </header>
