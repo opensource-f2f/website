@@ -21,13 +21,9 @@ const routes: RouteRecordRaw[] = [
 for (const { id } of getAllEpisode()) {
   routes.push({
     name: `Episode${id}`,
-    path: `/episode/${id}${import.meta.env.PROD ? '.html' : ''}`,
+    path: `/episode/${id}`,
     component: h(EpisodeContent, { id }),
   })
 }
 
-export const createApp = ViteSSG(
-  App,
-  { routes }
-  // ({ app, router, routes, isClient, initialState }) => {}
-)
+export const createApp = ViteSSG(App, { routes })
