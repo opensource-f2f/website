@@ -20,26 +20,30 @@ const episodes = $computed(() =>
 </script>
 
 <template>
-  <div flex="~ row gap-2" justify-end items-center px-6 py-2>
+  <div flex="~ col 1">
+    <div flex="~ row gap-2" justify-end items-center px-6 py-2>
+      <div
+        :class="
+          sort === 'asc'
+            ? 'i-carbon-sort-descending'
+            : 'i-carbon-sort-ascending'
+        "
+        cursor-pointer
+        text-2xl
+        @click="handleSort"
+      />
+    </div>
     <div
-      :class="
-        sort === 'asc' ? 'i-carbon-sort-descending' : 'i-carbon-sort-ascending'
-      "
-      cursor-pointer
-      text-2xl
-      @click="handleSort"
-    />
-  </div>
-  <div
-    grid
-    gap-2
-    justify-center
-    style="grid-template-columns: repeat(auto-fill, 500px)"
-  >
-    <episode-item
-      v-for="episode of episodes"
-      :key="episode.id"
-      :info="episode"
-    />
+      grid
+      gap-2
+      justify-center
+      style="grid-template-columns: repeat(auto-fill, 500px)"
+    >
+      <episode-item
+        v-for="episode of episodes"
+        :key="episode.id"
+        :info="episode"
+      />
+    </div>
   </div>
 </template>

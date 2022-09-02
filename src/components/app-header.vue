@@ -5,7 +5,7 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <header
-    flex="~ row"
+    flex="~ row none"
     relative
     h-240px
     w-full

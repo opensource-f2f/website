@@ -30,10 +30,6 @@ a {
   --at-apply: 'hover:underline underline-offset-2';
 }
 
-#app {
-  --at-apply: 'flex flex-col';
-}
-
 .markdown-body {
   background-color: transparent;
   color: var(--text-color);

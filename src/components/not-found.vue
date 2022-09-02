@@ -4,9 +4,3 @@
     <p>This page could not be found.</p>
   </div>
 </template>
-
-<style>
-#app {
-  height: 100vh;
-}
-</style>
