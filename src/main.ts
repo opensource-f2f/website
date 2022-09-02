@@ -16,6 +16,11 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('./components/index.vue'),
   },
+  {
+    name: 'NotFound',
+    path: '/:pathMatch(.*)*',
+    component: () => import('./components/not-found.vue'),
+  },
 ]
 
 for (const { id } of getAllEpisode()) {

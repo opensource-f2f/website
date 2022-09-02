@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     EpisodeInfo: typeof import('./../components/episode-info.vue')['default']
     EpisodeItem: typeof import('./../components/episode-item.vue')['default']
     EpisodeMeta: typeof import('./../components/episode-meta.vue')['default']
+    NotFound: typeof import('./../components/not-found.vue')['default']
     Person: typeof import('./../components/person.vue')['default']
     PersonList: typeof import('./../components/person-list.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
