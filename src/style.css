@@ -26,6 +26,8 @@ body {
 .markdown-body a,
 a {
   color: var(--link-color);
+
+  --at-apply: 'hover:underline underline-offset-2';
 }
 
 #app {
