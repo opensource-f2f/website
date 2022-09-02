@@ -20,7 +20,7 @@ const episodes = $computed(() =>
 </script>
 
 <template>
-  <div flex="~ col 1">
+  <div flex="~ col 1" px-4>
     <div flex="~ row gap-2" justify-end items-center px-6 py-2>
       <div
         :class="
@@ -33,12 +33,7 @@ const episodes = $computed(() =>
         @click="handleSort"
       />
     </div>
-    <div
-      grid
-      gap-2
-      justify-center
-      style="grid-template-columns: repeat(auto-fill, 500px)"
-    >
+    <div class="episodes" grid gap-2 justify-center>
       <episode-item
         v-for="episode of episodes"
         :key="episode.id"
@@ -47,3 +42,9 @@ const episodes = $computed(() =>
     </div>
   </div>
 </template>
+
+<style scoped>
+.episodes {
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+}
+</style>

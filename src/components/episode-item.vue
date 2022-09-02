@@ -18,7 +18,6 @@ const handleClick = () => {
 
 <template>
   <div
-    w-500px
     flex="~ col gap-2"
     items-center
     px-6
