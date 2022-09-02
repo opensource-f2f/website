@@ -1,5 +1,19 @@
 <template>
   <app-header />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <Transition>
+      <component :is="Component" />
+    </Transition>
+  </router-view>
   <app-footer />
 </template>
+
+<style scoped>
+.v-enter-active {
+  transition: opacity 0.5s ease-in;
+}
+
+.v-enter-from {
+  opacity: 0;
+}
+</style>
