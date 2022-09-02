@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getPersonKey } from '../utils/episode'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import type { Person } from '../utils/episode'
 
@@ -8,11 +9,8 @@ const { persons } = defineProps<{
 </script>
 
 <template>
-  <div
-    v-for="(person, index) of persons"
-    :key="typeof person === 'string' ? person : person.name"
-  >
+  <badge v-for="person of persons" :key="getPersonKey(person)">
+    <template #icon><slot name="icon" /></template>
     <person :person="person" />
-    <span v-if="index !== persons.length - 1">,</span>
-  </div>
+  </badge>
 </template>

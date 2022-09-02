@@ -8,13 +8,12 @@ defineProps<{
 
 <template>
   <div flex="~ row gap-2">
-    <badge v-if="info.hosts?.length">
+    <person-list v-if="info.hosts?.length" :persons="info.hosts">
       <template #icon><div i-carbon-user-speaker /></template>
-      <person-list :persons="info.hosts" />
-    </badge>
-    <badge v-if="info.guests?.length">
-      <template #icon><div i-carbon-user-multiple /></template>
-      <person-list :persons="info.guests" />
-    </badge>
+    </person-list>
+
+    <person-list v-if="info.guests?.length" :persons="info.guests">
+      <template #icon><div i-carbon-user /></template>
+    </person-list>
   </div>
 </template>
