@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div flex="~ row gap-2">
+  <div flex="~ row gap-2 wrap" items-center justify-center>
     <person-list v-if="info.hosts?.length" :persons="info.hosts">
       <template #icon><div i-carbon-user-speaker /></template>
     </person-list>
