@@ -10,7 +10,7 @@
 
 <style scoped>
 .v-enter-active {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .v-enter-from {
