@@ -26,10 +26,16 @@ const episodes = $computed(() =>
         sort === 'asc' ? 'i-carbon-sort-descending' : 'i-carbon-sort-ascending'
       "
       cursor-pointer
+      text-2xl
       @click="handleSort"
     />
   </div>
-  <div class="episodes" grid gap-2 justify-center>
+  <div
+    grid
+    gap-2
+    justify-center
+    style="grid-template-columns: repeat(auto-fill, 500px)"
+  >
     <episode-item
       v-for="episode of episodes"
       :key="episode.id"
@@ -37,9 +43,3 @@ const episodes = $computed(() =>
     />
   </div>
 </template>
-
-<style scoped>
-.episodes {
-  grid-template-columns: repeat(auto-fill, 500px);
-}
-</style>

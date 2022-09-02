@@ -4,7 +4,14 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <header class="header" flex="~ row" relative h-240px w-full justify-center>
+  <header
+    flex="~ row"
+    relative
+    h-240px
+    w-full
+    justify-center
+    style="background: var(--header-bg)"
+  >
     <div flex="~ col gap-16px" justify-center items-center>
       <router-link :to="{ name: 'Index' }">
         <img w-100px h-100px src="../assets/logo.png" />
@@ -22,9 +29,3 @@ const toggleDark = useToggle(isDark)
     />
   </header>
 </template>
-
-<style scoped>
-.header {
-  background: var(--header-bg);
-}
-</style>

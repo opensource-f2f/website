@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <span
     flex="~ row gap-1"
@@ -13,6 +11,8 @@
     bg="[var(--brand-color)]"
     dark:bg="#3E6B27"
     text="[var(--text-color)]"
+    transition
+    style="transition-property: background-color"
   >
     <slot name="icon" />
     <slot />
