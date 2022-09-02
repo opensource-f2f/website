@@ -1,6 +1,12 @@
 <template>
-  <div container mx-auto text-center py-10>
+  <div flex="~ col 1" items-center justify-center>
     <h1 font-500 text-10>404</h1>
-    <p>This page could not be found</p>
+    <p>This page could not be found.</p>
   </div>
 </template>
+
+<style>
+#app {
+  height: 100vh;
+}
+</style>

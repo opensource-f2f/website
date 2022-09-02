@@ -1,5 +1,5 @@
 <template>
-  <div text-center py-6>
+  <footer class="footer" text-center py-6>
     <p text-sm>
       Designed by
       <a href="https://pan.icu/" target="_blank">内核恐慌</a>,
@@ -8,5 +8,5 @@
     </p>
     <p>Made with ❤️</p>
     <p>开源面对面 &copy; 2022</p>
-  </div>
+  </footer>
 </template>

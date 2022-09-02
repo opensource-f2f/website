@@ -21,6 +21,10 @@ body {
     'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 }
 
+#app {
+  --at-apply: 'flex flex-col';
+}
+
 .markdown-body {
   background-color: transparent;
   color: var(--text-color);
