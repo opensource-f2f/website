@@ -23,4 +23,5 @@ body {
 
 .markdown-body {
   background-color: transparent;
+  color: var(--text-color);
 }
