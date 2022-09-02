@@ -4,6 +4,7 @@
   --text-color: #333;
   --brand-color: #c3e1b5;
   --bg: #ffffff;
+  --link-color: #0969da;
 }
 
 .dark {
@@ -12,6 +13,7 @@
   --bg: #141414;
 
   color-scheme: dark;
+  --link-color: #95d3f5;
 }
 
 body {
@@ -19,6 +21,11 @@ body {
   background-color: var(--bg);
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
     'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+.markdown-body a,
+a {
+  color: var(--link-color);
 }
 
 #app {

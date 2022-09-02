@@ -18,13 +18,12 @@ const handleClick = () => {
 
 <template>
   <div
-    min-w-300px
-    max-w-480px
-    flex="~ col gap-2 1"
+    w-500px
+    flex="~ col gap-2"
     items-center
     px-6
     py-4
-    class="episode-item"
+    border="~ dashed [var(--border-color)]"
   >
     <div flex="~" justify-between w-full font-mono>
       <span>{{ info.id }}</span>
@@ -38,6 +37,8 @@ const handleClick = () => {
       text="20px center"
       font-500
       cursor-pointer
+      hover:underline
+      underline-offset-4
       @click="handleClick"
       v-html="info.title"
     />
@@ -49,10 +50,3 @@ const handleClick = () => {
     </span>
   </div>
 </template>
-
-<style scoped>
-.episode-item {
-  border: 1px dashed var(--border-color);
-  margin: 0px -1px -1px 0px;
-}
-</style>

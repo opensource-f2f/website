@@ -8,7 +8,6 @@ const handleSort = () => {
   sort = sort === 'asc' ? 'desc' : 'asc'
 }
 
-// sort
 const episodes = $computed(() =>
   [...rawEpisodes].sort((a, b) => {
     if (sort === 'asc') {
@@ -30,7 +29,7 @@ const episodes = $computed(() =>
       @click="handleSort"
     />
   </div>
-  <div flex="~ row wrap" justify-center>
+  <div class="episodes" grid gap-2 justify-center>
     <episode-item
       v-for="episode of episodes"
       :key="episode.id"
@@ -38,3 +37,9 @@ const episodes = $computed(() =>
     />
   </div>
 </template>
+
+<style scoped>
+.episodes {
+  grid-template-columns: repeat(auto-fill, 500px);
+}
+</style>
