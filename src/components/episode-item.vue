@@ -1,19 +1,12 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
-import { useRouter } from 'vue-router'
 import type { Episode } from '../utils/episode'
-
-const router = useRouter()
 
 const { info } = defineProps<{
   info: Episode
 }>()
 
 const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
-
-const handleClick = () => {
-  router.push({ name: `Episode${info.id}` })
-}
 </script>
 
 <template>
@@ -32,15 +25,18 @@ const handleClick = () => {
       </span>
     </div>
 
-    <h2
-      text="20px center"
+    <router-link
+      block
+      text-20px
+      text-center
       font-500
-      cursor-pointer
       hover:underline
       underline-offset-4
-      @click="handleClick"
-      v-html="info.title"
-    />
+      class="text-[var(--text-color)]"
+      :to="{ name: `Episode${info.id}` }"
+    >
+      <h2 v-html="info.title" />
+    </router-link>
 
     <episode-meta :info="info" />
 
