@@ -2,7 +2,7 @@ import { ViteSSG } from 'vite-ssg'
 import { h } from 'vue'
 import App from './App.vue'
 import { getAllEpisode } from './utils/episode'
-import EpisodeContent from './components/episode-content.vue'
+
 import type { RouteRecordRaw } from 'vue-router'
 
 import '@unocss/reset/tailwind.css'
@@ -27,7 +27,12 @@ for (const { id } of getAllEpisode()) {
   routes.push({
     name: `Episode${id}`,
     path: `/episode/${id}`,
-    component: h(EpisodeContent, { id }),
+    component: () =>
+      import('./components/episode-content.vue').then(
+        ({ default: EpisodeContent }) => {
+          return h(EpisodeContent, { id })
+        }
+      ),
   })
 }
 
