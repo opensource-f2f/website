@@ -13,6 +13,10 @@
     <p>
       <a href="https://github.com/opensource-f2f" target="_blank">开源面对面</a>
       &copy; 2022
+      
+      <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">京ICP备2022023077号</a>
+      
+      Sponsored by <a href="https://www.agora.io/cn/" target="_blank">声网</a>
     </p>
   </footer>
 </template>
