@@ -23,4 +23,4 @@ jobs:
         run: nci
 
       - name: Lint
-        run: nr lint
+        run: nr lint --max-warnings 0
