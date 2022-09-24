@@ -1,0 +1,5 @@
+/* There's no 500-weight font on Windows (especially Microsoft YaHei), so change it to 700. */
+.font-500,
+[font-500=''] {
+  font-weight: 700;
+}
