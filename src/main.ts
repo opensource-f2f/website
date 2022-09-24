@@ -1,7 +1,9 @@
 import { ViteSSG } from 'vite-ssg'
 import { h } from 'vue'
+import { isClient } from '@vueuse/core'
 import App from './App.vue'
 import { getAllEpisode } from './utils/episode'
+import { detectFont } from './utils/font'
 
 import type { RouteRecordRaw } from 'vue-router'
 
@@ -42,3 +44,8 @@ for (const { id } of getAllEpisode()) {
 }
 
 export const createApp = ViteSSG(App, { routes })
+
+if (isClient && !detectFont()('PingFang SC')) {
+  // improve font on Windows
+  import('./style-font.css')
+}
