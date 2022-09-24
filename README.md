@@ -17,10 +17,8 @@ pnpm dev
 
 ## Todo List
 
-- Dark theme
+- 拉取节目仓库的 markdown #12
 - PWA
-- 样式
 - favicon
-- 移动适配
 - 搜索
 - 评论 (TBD)
