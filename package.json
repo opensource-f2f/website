@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite-ssg build",
     "preview": "vite preview",
-    "lint": "eslint --ext .js,.ts,.vue . --fix"
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "eslint --ext .js,.ts,.vue . --fix"
   },
   "dependencies": {
     "@vueuse/core": "^9.2.0",
