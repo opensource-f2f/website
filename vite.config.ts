@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import Markdown from 'vite-plugin-vue-markdown'
+import Inspect from 'vite-plugin-inspect'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -25,5 +26,6 @@ export default defineConfig({
       dts: path.resolve(pathSrc, 'typings/auto-import.d.ts'),
     }),
     UnoCSS(),
+    Inspect(),
   ],
 })
