@@ -10,13 +10,7 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 </script>
 
 <template>
-  <div
-    flex="~ col gap-2"
-    items-center
-    px-6
-    py-4
-    border="~ dashed [var(--border-color)]"
-  >
+  <div class="episode-item" flex="~ col gap-2" items-center px-6 py-4>
     <div flex="~" justify-between w-full font-mono>
       <span>{{ info.id }}</span>
       <span flex="~ gap-1" items-center>
@@ -45,3 +39,11 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
     </span>
   </div>
 </template>
+
+<style scoped>
+.episode-item {
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(-45deg, #ccc 0, #ccc 0.5em, white 0, white 0.75em);
+}
+</style>
