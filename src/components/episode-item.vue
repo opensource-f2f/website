@@ -43,7 +43,13 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 <style scoped>
 .episode-item {
   border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-    repeating-linear-gradient(-45deg, #ccc 0, #ccc 0.5em, white 0, white 0.75em);
+  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+    repeating-linear-gradient(
+      -45deg,
+      var(--border-color) 0,
+      var(--border-color) 0.5em,
+      transparent 0,
+      transparent 0.75em
+    );
 }
 </style>
