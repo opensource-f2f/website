@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "content": "rm -rf content && git clone -b improve-episodes https://github.com/linuxsuren/episode content && mkdir -p src/episodes && cp content/shownotes/* src/episodes && rm -rf src/episodes/README.md",
     "dev": "vite",
     "build": "vite-ssg build",
     "preview": "vite preview",

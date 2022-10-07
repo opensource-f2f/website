@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 .vercel
 .vite-ssg-temp
+
+content
