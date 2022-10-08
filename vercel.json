@@ -1,4 +1,4 @@
 {
   "cleanUrls": true,
-  "buildCommand": "npm run content && npm run build"
+  "buildCommand": "npm run fetch && npm run build"
 }

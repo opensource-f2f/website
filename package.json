@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "content": "rm -rf content && git clone https://github.com/opensource-f2f/episode content && mkdir -p src/episodes && cp content/shownotes/* src/episodes && rm -rf src/episodes/README.md",
+    "fetch": "./scripts/fetch.sh",
     "dev": "vite",
     "build": "vite-ssg build",
     "preview": "vite preview",
