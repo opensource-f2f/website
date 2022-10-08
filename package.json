@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "fetch": "./scripts/fetch.sh",
     "dev": "vite",
     "build": "vite-ssg build",
     "preview": "vite preview",
