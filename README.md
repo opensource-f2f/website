@@ -1,6 +1,6 @@
 # 开源面对面官网
 
-WIP
+[Eposide Repo](https://github.com/opensource-f2f/episode)
 
 ## 开发设置
 
@@ -21,8 +21,11 @@ pnpm dev
 
 ## Todo List
 
-- 拉取节目仓库的 markdown #12
 - PWA
 - favicon
 - 搜索
 - 评论 (TBD)
+
+## License
+
+[Apache License 2.0](./LICENSE) © 2022 [OpenSource F2F](https://github.com/opensource-f2f)
