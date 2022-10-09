@@ -12,6 +12,7 @@
     "lint:fix": "eslint --ext .js,.ts,.vue . --fix"
   },
   "dependencies": {
+    "@giscus/vue": "^2.2.0",
     "@vueuse/core": "^9.3.0",
     "@vueuse/head": "^0.9.7",
     "date-fns": "^2.29.3",

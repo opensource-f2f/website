@@ -23,7 +23,6 @@ pnpm dev
 
 - favicon
 - 搜索
-- 评论 (TBD)
 
 ## License
 
