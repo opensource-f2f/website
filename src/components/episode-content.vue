@@ -11,7 +11,9 @@ const episode = $computed(() => episodes.find((episode) => episode.id === id))
 <template>
   <div v-if="episode" container mx-auto px-4 mt-5>
     <div mb-5>
-      <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
+      <a :href="`${episode.link}`" target="_blank">
+        <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
+      </a>
       <episode-meta :info="episode" justify-center />
     </div>
 
