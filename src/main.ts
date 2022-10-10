@@ -50,7 +50,7 @@ for (const { id } of getAllEpisode()) {
 }
 for (const { github } of getAllContributors()) {
   routes.push({
-    name: `Contributor{github}`,
+    name: `Contributor${github}`,
     path: `/contributor/${github}`,
     component: () =>
       import(`./components/contributor-content.vue`).then(
