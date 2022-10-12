@@ -4,8 +4,8 @@ import { isClient } from '@vueuse/core'
 import App from './App.vue'
 import { getAllEpisode } from './utils/episode'
 import { detectFont } from './utils/font'
-
 import { getAllContributors } from './utils/contributor'
+
 import type { RouteRecordRaw } from 'vue-router'
 
 import '@unocss/reset/tailwind.css'
@@ -25,7 +25,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('./components/not-found.vue'),
   },
   {
-    name: 'Contributor NotFound',
+    name: 'NotFoundContributor',
     path: '/contributor/:pathMatch(.*)*',
     component: () => import('./components/contributor-not-found.vue'),
   },
@@ -53,7 +53,7 @@ for (const { github } of getAllContributors()) {
     name: `Contributor${github}`,
     path: `/contributor/${github}`,
     component: () =>
-      import(`./components/contributor-content.vue`).then(
+      import('./components/contributor-content.vue').then(
         ({ default: ContributorContent }) => {
           return h(ContributorContent, { github })
         }

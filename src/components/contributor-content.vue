@@ -3,7 +3,9 @@ import { getAllContributors } from '../utils/contributor'
 
 const contributors = getAllContributors()
 
-const { github } = defineProps<{ github: string }>()
+const { github } = defineProps<{
+  github: string
+}>()
 
 const contributor = $computed(() =>
   contributors.find((contributor) => contributor.github === github)
@@ -18,22 +20,16 @@ const contributor = $computed(() =>
       <a :href="`https://github.com/${contributor.github}`" target="_blank">
         <img
           :src="`https://avatars.githubusercontent.com/${contributor.github}`"
-          :alt="`${contributor.github}`"
-          size="128"
-          height="128"
-          width="128"
-          data-view-component="true"
-          class="avatar"
+          :alt="contributor.github"
+          class="w-128px"
         />
       </a>
 
       <span v-if="contributor.twitter">
         Twitter:
-        <a
-          :href="`https://twitter.com/${contributor.twitter}`"
-          target="_blank"
-          >{{ contributor.twitter }}</a
-        >
+        <a :href="`https://twitter.com/${contributor.twitter}`" target="_blank">
+          {{ contributor.twitter }}
+        </a>
       </span>
 
       <component :is="contributor.default" />

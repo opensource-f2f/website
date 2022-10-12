@@ -1,8 +1,12 @@
 import type { Component } from 'vue'
 
-export type Link = { title: string; link: string }
+interface Link {
+  title: string
+  link: string
+}
 
 export interface RawContributor {
+  name: string
   github: string
   blog?: string
   twitter?: string
@@ -13,10 +17,6 @@ export interface RawContributor {
 }
 
 export const getAllContributors = () =>
-  Object.entries(
+  Object.values(
     import.meta.glob<RawContributor>('../contributors/*.md', { eager: true })
-  ).map(([, module]): RawContributor => {
-    return {
-      ...module,
-    }
-  })
+  )
