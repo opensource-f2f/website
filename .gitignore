@@ -27,3 +27,4 @@ dist-ssr
 
 content
 src/episodes/*
+src/contributors/*
