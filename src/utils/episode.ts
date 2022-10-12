@@ -9,6 +9,7 @@ export interface RawEpisode {
   hosts?: Person[]
   guests?: Person[]
   description: string
+  link: string
   default: Component
 }
 
