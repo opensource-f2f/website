@@ -11,7 +11,6 @@ declare module '@vue/runtime-core' {
     AppHeader: typeof import('./../components/app-header.vue')['default']
     Badge: typeof import('./../components/badge.vue')['default']
     ContributorContent: typeof import('./../components/contributor-content.vue')['default']
-    ContributorNotFound: typeof import('./../components/contributor-not-found.vue')['default']
     EpisodeContent: typeof import('./../components/episode-content.vue')['default']
     EpisodeItem: typeof import('./../components/episode-item.vue')['default']
     EpisodeMeta: typeof import('./../components/episode-meta.vue')['default']

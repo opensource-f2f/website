@@ -25,11 +25,6 @@ const routes: RouteRecordRaw[] = [
     component: () => import('./components/not-found.vue'),
   },
   {
-    name: 'NotFoundContributor',
-    path: '/contributor/:pathMatch(.*)*',
-    component: () => import('./components/contributor-not-found.vue'),
-  },
-  {
     name: 'NotFoundSSG',
     path: '/404',
     component: () => import('./components/not-found.vue'),
