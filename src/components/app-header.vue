@@ -14,7 +14,7 @@ const toggleDark = useToggle(isDark)
   >
     <div flex="~ col gap-16px" justify-center items-center>
       <router-link :to="{ name: 'Index' }">
-        <img w-100px h-100px src="../assets/logo.png" />
+        <img w-100px h-100px rounded-2 src="../assets/logo.png" />
       </router-link>
       <span>开源面对面，连接热爱开源的你！</span>
 
