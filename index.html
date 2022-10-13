@@ -7,19 +7,7 @@
   <title>开源面对面</title>
   <link rel="icon" href="src/assets/logo.ico" type="image/x-icon">
   <meta name="theme-color" content="#b7dca7" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFQR3NV8ME"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-PFQR3NV8ME');
-  </script>
-</head>
-
-<body transition-colors antialiased>
-  <div id="app" class="flex flex-col h-100vh"></div>
   <script>
     (function () {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -28,6 +16,20 @@
         document.documentElement.classList.toggle('dark', true)
     })()
   </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFQR3NV8ME"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PFQR3NV8ME');
+  </script>
+</head>
+
+<body transition-colors antialiased>
+  <div id="app" class="flex flex-col h-100vh"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>
 
