@@ -55,6 +55,13 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,svg,ico}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+            method: 'GET',
+            handler: 'NetworkFirst',
+          },
+        ],
         clientsClaim: true,
       },
     }),
