@@ -21,7 +21,6 @@ pnpm dev
 
 ## Todo List
 
-- PWA
 - favicon
 - 搜索
 - 评论 (TBD)
