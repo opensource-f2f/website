@@ -12,9 +12,9 @@
     </p>
     <p>
       <a href="https://vercel.com/?utm_source=[osf2f]&utm_campaign=oss">
-      <img src="../assets/powered-by-vercel.svg"
-        /></a>
-    </p>  
+        <img src="../assets/powered-by-vercel.svg"
+      /></a>
+    </p>
     <p>
       <a href="https://github.com/opensource-f2f" target="_blank">开源面对面</a>
       &copy; 2022
