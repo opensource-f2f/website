@@ -28,4 +28,6 @@ pnpm dev
 
 [Apache License 2.0](./LICENSE) © 2022 [OpenSource F2F](https://github.com/opensource-f2f)
 
-<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"/>
+<a href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss">
+  <img src="./src/assets/powered-by-vercel.svg" />
+</a>
