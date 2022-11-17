@@ -1,7 +1,10 @@
 <template>
   <footer text-center py-6 leading-7>
     <div py-2>
-      <a href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss">
+      <a
+        href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss"
+        target="_blank"
+      >
         <img src="../assets/powered-by-vercel.svg" max-h-9 ma />
       </a>
     </div>
