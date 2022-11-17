@@ -24,21 +24,23 @@ const episode = $computed(() => episodes.find((episode) => episode.id === id))
 
     <component :is="episode.default" />
 
-    <Giscus
-      id="comments"
-      repo="opensource-f2f/website"
-      repo-id="R_kgDOH62a3Q="
-      category="General"
-      category-id="DIC_kwDOH62a3c4CR4dr"
-      mapping="pathname"
-      term="欢迎来到《开源面对面》"
-      reactions-enabled="1"
-      emit-metadata="0"
-      input-position="top"
-      theme="preferred_color_scheme"
-      lang="zh-CN"
-      crossorigin="anonymous"
-      loading="lazy"
-    />
+    <div mt-5>
+      <Giscus
+        id="comments"
+        repo="opensource-f2f/website"
+        repo-id="R_kgDOH62a3Q="
+        category="General"
+        category-id="DIC_kwDOH62a3c4CR4dr"
+        mapping="pathname"
+        term="欢迎来到《开源面对面》"
+        reactions-enabled="1"
+        emit-metadata="0"
+        input-position="top"
+        theme="preferred_color_scheme"
+        lang="zh-CN"
+        crossorigin="anonymous"
+        loading="lazy"
+      />
+    </div>
   </div>
 </template>
