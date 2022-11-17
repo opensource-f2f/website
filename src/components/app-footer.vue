@@ -12,7 +12,7 @@
     </p>
     
     <p>
-      <a href="https://vercel.com/?utm_source=[osf2f]&utm_campaign=oss"><img src=""></a>
+      <a href="https://vercel.com/?utm_source=[osf2f]&utm_campaign=oss"><img src="../assets/powered-by-vercel.svg"></a>
     </p>
     
     <p>
