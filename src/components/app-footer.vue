@@ -11,7 +11,8 @@
       <a href="https://github.com/sxzz" target="_blank">三咲智子</a> with ❤️
     </p>
     <p>
-      <a href="https://vercel.com/?utm_source=[osf2f]&utm_campaign=oss"><img src="../assets/powered-by-vercel.svg"/></a>
+      <a href="https://vercel.com/?utm_source=[osf2f]&utm_campaign=oss">
+      <img src="../assets/powered-by-vercel.svg"/></a>
     </p>  
     <p>
       <a href="https://github.com/opensource-f2f" target="_blank">开源面对面</a>
