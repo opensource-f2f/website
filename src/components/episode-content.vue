@@ -28,7 +28,7 @@ const episode = $computed(() => episodes.find((episode) => episode.id === id))
       <Giscus
         id="comments"
         repo="opensource-f2f/website"
-        repo-id="R_kgDOH62a3Q="
+        repo-id="R_kgDOH62a3Q"
         category="General"
         category-id="DIC_kwDOH62a3c4CR4dr"
         mapping="pathname"
