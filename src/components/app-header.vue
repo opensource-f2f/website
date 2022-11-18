@@ -46,6 +46,15 @@ const toggleDark = useToggle(isDark)
             src="https://img.shields.io/badge/rss-F88900?style=flat&logo=rss&logoColor=white"
           />
         </a>
+        <a
+          target="_blank"
+          href="https://open.spotify.com/show/48Yeu1L5pTluk1AVc3ShU6"
+        >
+          <img
+            alt="Listen on Spotify"
+            src="https://img.shields.io/badge/spotify-1DB954?style=flat&logo=spotify&logoColor=white"
+          />
+        </a>
       </div>
     </div>
     <div
