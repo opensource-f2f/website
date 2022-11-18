@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Giscus from '@giscus/vue'
+import { useHead } from '@vueuse/head'
 import { getAllEpisode } from '../utils/episode'
 
 const episodes = getAllEpisode()
@@ -7,6 +8,20 @@ const episodes = getAllEpisode()
 const { id } = defineProps<{ id: string }>()
 
 const episode = $computed(() => episodes.find((episode) => episode.id === id))
+
+if (episode)
+  useHead({
+    title: episode.title,
+    meta: [
+      { name: 'description', content: episode.description },
+      { property: 'og:title', content: episode.title },
+      { property: 'og:description', content: episode.description },
+      {
+        property: 'og:url',
+        content: `https://osf2f.net/episode/${episode.id}`,
+      },
+    ],
+  })
 </script>
 
 <template>
