@@ -13,9 +13,15 @@ if (episode)
   useHead({
     title: episode.title,
     meta: [
-      { name: 'description', content: episode.description },
+      {
+        name: 'description',
+        content: episode.description || episode.title || '',
+      },
       { property: 'og:title', content: episode.title },
-      { property: 'og:description', content: episode.description },
+      {
+        property: 'og:description',
+        content: episode.description || episode.title || '',
+      },
       {
         property: 'og:url',
         content: `https://osf2f.net/episode/${episode.id}`,

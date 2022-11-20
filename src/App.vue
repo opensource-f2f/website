@@ -2,7 +2,7 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-  titleTemplate: (title) => (title ? `${title} - 开源面对面` : '开源面对面'),
+  titleTemplate: (title) => (title ? `${title} | 开源面对面` : '开源面对面'),
 })
 </script>
 
