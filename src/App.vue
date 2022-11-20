@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
+
+useHead({
+  titleTemplate: (title) => (title ? `${title} | 开源面对面` : '开源面对面'),
+})
+</script>
+
 <template>
   <app-header />
   <router-view v-slot="{ Component }">

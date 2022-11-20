@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import { getAllContributors } from '../utils/contributor'
 
 const contributors = getAllContributors()
@@ -10,6 +11,18 @@ const { github } = defineProps<{
 const contributor = $computed(() =>
   contributors.find((contributor) => contributor.github === github)
 )
+
+if (contributor)
+  useHead({
+    title: contributor.name,
+    meta: [
+      { property: 'og:title', content: contributor.name },
+      {
+        property: 'og:url',
+        content: `https://osf2f.net/contributor/${contributor.github}`,
+      },
+    ],
+  })
 </script>
 
 <template>

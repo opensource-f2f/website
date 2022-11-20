@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { isClient } from '@vueuse/core'
+import { useHead } from '@vueuse/head'
 
 const path = isClient ? location.pathname : ''
+
+useHead({
+  title: '404',
+})
 </script>
 
 <template>
