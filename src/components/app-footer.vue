@@ -5,7 +5,12 @@
         href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss"
         target="_blank"
       >
-        <img src="../assets/powered-by-vercel.svg" max-h-9 ma />
+        <img
+          max-h-9
+          ma
+          src="../assets/powered-by-vercel.svg"
+          alt="Powered by vercel"
+        />
       </a>
     </div>
 
