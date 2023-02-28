@@ -46,7 +46,7 @@ const toggleDark = useToggle(isDark)
             src="https://img.shields.io/youtube/channel/subscribers/UCV7Ibg1k_aMSEcDFgJvuvdg?style=social"
           />
         </a>
-        <a target="_blank" href="https://www.ximalaya.com/album/53320813.xml">
+        <a target="_blank" href="https://feeds.osf2f.net/osf2f.xml">
           <img
             alt="RSS address"
             src="https://img.shields.io/badge/rss-F88900?style=flat&logo=rss&logoColor=white"
