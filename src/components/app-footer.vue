@@ -32,7 +32,7 @@
       <a href="https://beian.miit.gov.cn/" target="_blank"
         >京ICP备2022023077号-1</a
       >
-      Sponsored by <a href="https://www.agora.io/cn/" target="_blank">声网</a>
+      Sponsored by <a href="https://www.shengwang.cn" target="_blank">声网</a>
     </p>
   </footer>
 </template>
