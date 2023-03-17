@@ -36,7 +36,7 @@ if (episode)
       <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
       <div flex justify-center my-2>
         <a :href="episode.link" target="_blank">
-          <img title="喜马拉雅" src="../assets/xmly.png" w-20px />
+          <img title="listening" src="../assets/listen.png" w-20px />
         </a>
       </div>
 
