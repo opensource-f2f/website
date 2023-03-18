@@ -35,8 +35,8 @@ if (episode)
     <div mb-5>
       <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
       <div flex justify-center my-2>
-        <a :href="episode.link" target="_blank">
-          <img title="喜马拉雅" src="../assets/xmly.png" w-20px />
+        <a :href="episode.link" target="_blank" text-black dark:text-white>
+          <div i-fluent:headphones-sound-wave-24-filled text-xl />
         </a>
       </div>
 
