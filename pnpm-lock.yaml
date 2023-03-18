@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@giscus/vue': ^2.2.8
-  '@iconify-json/carbon': ^1.1.16
+  '@iconify/json': ^2.2.36
   '@sxzz/eslint-config': ^2.4.5
   '@types/node': ^18.15.3
   '@unocss/reset': ^0.50.6
@@ -38,7 +38,7 @@ dependencies:
   vue-router: 4.1.6_vue@3.2.47
 
 devDependencies:
-  '@iconify-json/carbon': 1.1.16
+  '@iconify/json': 2.2.36
   '@sxzz/eslint-config': 2.4.5_rnw7zc2wljykqwrgq332y2pw2i
   '@types/node': 18.15.3
   '@unocss/reset': 0.50.6
@@ -1477,10 +1477,11 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify-json/carbon/1.1.16:
-    resolution: {integrity: sha512-AD8bcnRSGA0WfcGEass2FbA0sagrUzrpFx5WchuDy3uf7yKBWumdypdQK121DH321fQDl5+zZQ26T6gC9knwUQ==}
+  /@iconify/json/2.2.36:
+    resolution: {integrity: sha512-M3NzzLjmE5udIO24EgT9MV1LfU5FQDw9nfAfgrV3NySiLMtZFoOvFEdURJihH2SJWCoFhIpRRkgSZKN8qWIhuQ==}
     dependencies:
       '@iconify/types': 2.0.0
+      pathe: 1.1.0
     dev: true
 
   /@iconify/types/2.0.0:
