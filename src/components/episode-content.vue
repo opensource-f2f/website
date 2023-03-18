@@ -9,6 +9,12 @@ const { id } = defineProps<{ id: string }>()
 
 const episode = $computed(() => episodes.find((episode) => episode.id === id))
 
+function isAudio(url) {
+  const audioFormats = ['mp3', 'm4a']
+
+  return audioFormats.some((format) => url.endsWith(`.${format}`))
+}
+
 if (episode)
   useHead({
     title: episode.title,
@@ -34,10 +40,16 @@ if (episode)
   <div v-if="episode" container mx-auto px-4 mt-5>
     <div mb-5>
       <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
-      <div flex justify-center my-2>
-        <a :href="episode.link" target="_blank" text-black dark:text-white>
-          <div i-fluent:headphones-sound-wave-24-filled text-xl />
-        </a>
+      <div v-if="isAudio(episode.link)">
+        <figure box-border my-2>
+          <audio
+            controls
+            :src="episode.link"
+            style="width: 100%; min-width: 300px"
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </figure>
       </div>
 
       <episode-meta :info="episode" justify-center />
