@@ -61,7 +61,19 @@ for (const { github } of getAllContributors()) {
   })
 }
 
-export const createApp = ViteSSG(App, { routes })
+export const createApp = ViteSSG(App, {
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition != null) {
+      return savedPosition
+    } else {
+      return {
+        top: 0,
+        behavior: 'smooth',
+      }
+    }
+  },
+})
 
 if (isClient && !detectFont()('PingFang SC')) {
   // improve font on Windows
