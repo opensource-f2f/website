@@ -61,10 +61,16 @@ const toggleDark = useToggle(isDark)
             src="https://img.shields.io/badge/spotify-1DB954?style=flat&logo=spotify&logoColor=white"
           />
         </a>
-        <a target="_blank" href="https://music.163.com/#/djradio?id=1001312291">
+        <a
+          w-135px
+          target="_blank"
+          href="https://music.163.com/#/djradio?id=1001312291"
+        >
           <img
+            h-15px
+            mt-3px
             alt="NetEase Music"
-            src="http://ir.music.163.com/images/logo_en.svg?style=flat&logo=neteasemusic&logoColor=white"
+            src="../assets/NetEase-music.svg"
           />
         </a>
       </div>
