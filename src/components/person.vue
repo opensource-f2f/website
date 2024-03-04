@@ -7,8 +7,8 @@ const { person } = defineProps<{
 </script>
 
 <template>
-  <a v-if="typeof person === 'string'" :href="`/contributor/${person}`">
+  <router-link v-if="typeof person === 'string'" :to="`/contributor/${person}`">
     {{ person }}
-  </a>
+  </router-link>
   <a v-else :href="person.link" target="_blank">{{ person.name }}</a>
 </template>
