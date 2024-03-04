@@ -62,10 +62,7 @@ const toggleDark = useToggle(isDark)
           />
         </a>
         <a target="_blank" href="https://music.163.com/#/djradio?id=1001312291">
-          <img
-            alt="NetEase Music"
-            src="http://ir.music.163.com/images/logo_en.svg?style=flat&logo=neteasemusic&logoColor=white"
-          />
+          <img h-20px alt="NetEase Music" src="../assets/netease-music.svg" />
         </a>
       </div>
     </div>
