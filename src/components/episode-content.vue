@@ -9,9 +9,8 @@ const { id } = defineProps<{ id: string }>()
 
 const episode = $computed(() => episodes.find((episode) => episode.id === id))
 
-function isAudio(url) {
+function isAudio(url: string) {
   const audioFormats = ['mp3', 'm4a']
-
   return audioFormats.some((format) => url.endsWith(`.${format}`))
 }
 
