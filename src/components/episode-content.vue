@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Giscus from '@giscus/vue'
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
 import { getAllEpisode } from '../utils/episode'
 
 const episodes = getAllEpisode()
