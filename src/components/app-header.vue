@@ -24,7 +24,7 @@ const toggleDark = useToggle(isDark)
       </router-link>
       <span>开源面对面，连接热爱开源的你！</span>
 
-      <div flex="~ row gap-2">
+      <div flex="~ row gap-2" flex-wrap justify-center>
         <a target="_blank" href="https://github.com/opensource-f2f">
           <img
             alt="GitHub Org's stars"
