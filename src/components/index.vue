@@ -3,14 +3,14 @@ import { getAllEpisode } from '../utils/episode'
 
 const rawEpisodes = Object.values(getAllEpisode())
 
-let sort = $ref<'asc' | 'desc'>('desc')
+const sort = ref<'asc' | 'desc'>('desc')
 const handleSort = () => {
-  sort = sort === 'asc' ? 'desc' : 'asc'
+  sort.value = sort.value === 'asc' ? 'desc' : 'asc'
 }
 
-const episodes = $computed(() =>
+const episodes = computed(() =>
   [...rawEpisodes].sort((a, b) => {
-    if (sort === 'asc') {
+    if (sort.value === 'asc') {
       return a.date.getTime() - b.date.getTime()
     } else {
       return b.date.getTime() - a.date.getTime()
@@ -21,7 +21,7 @@ const episodes = $computed(() =>
 
 <template>
   <div flex="~ col 1" px-4>
-    <div flex="~ row gap-2" justify-end items-center px-6 py-2>
+    <div flex="~ row gap-2" items-center justify-end px-6 py-2>
       <div
         :class="
           sort === 'asc'
@@ -33,7 +33,7 @@ const episodes = $computed(() =>
         @click="handleSort"
       />
     </div>
-    <div class="episodes" grid gap-2 justify-center>
+    <div class="episodes" grid justify-center gap-2>
       <episode-item
         v-for="episode of episodes"
         :key="episode.id"

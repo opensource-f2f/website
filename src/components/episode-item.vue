@@ -6,12 +6,12 @@ const { info } = defineProps<{
   info: Episode
 }>()
 
-const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
+const date = computed(() => format(info.date, 'yyyy-MM-dd'))
 </script>
 
 <template>
   <div class="episode-item" flex="~ col gap-2" items-center px-6 py-4>
-    <div flex="~" justify-between w-full font-mono>
+    <div flex="~" w-full justify-between font-mono>
       <span>{{ info.id }}</span>
       <span flex="~ gap-1" items-center>
         <div i-carbon-calendar />
@@ -21,11 +21,11 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 
     <router-link
       block
-      text-20px
       text-center
+      text-20px
       font-500
-      hover:underline
       underline-offset-4
+      hover:underline
       class="text-[var(--text-color)]"
       :to="{ name: `Episode${info.id}` }"
     >
@@ -34,7 +34,7 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 
     <episode-meta :info="info" />
 
-    <span font-400 text-15px line-clamp-5>
+    <span line-clamp-5 text-15px font-400>
       {{ info.description }}
     </span>
   </div>
@@ -43,7 +43,8 @@ const date = $computed(() => format(info.date, 'yyyy-MM-dd'))
 <style scoped>
 .episode-item {
   border: 1px solid transparent;
-  background: linear-gradient(var(--bg), var(--bg)) padding-box,
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
     repeating-linear-gradient(
       -45deg,
       var(--border-color) 0,

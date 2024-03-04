@@ -12,11 +12,11 @@ const toggleDark = useToggle(isDark)
     justify-center
     style="background: var(--header-bg)"
   >
-    <div flex="~ col gap-16px" justify-center items-center>
+    <div flex="~ col gap-16px" items-center justify-center>
       <router-link :to="{ name: 'Index' }">
         <img
-          w-100px
           h-100px
+          w-100px
           rounded-2
           src="/static/logo.png"
           alt="开源面对面"
@@ -68,9 +68,9 @@ const toggleDark = useToggle(isDark)
     </div>
     <div
       absolute
-      cursor-pointer
       right-5
       top-5
+      cursor-pointer
       i="dark:carbon-moon carbon-sun"
       text="black 2xl"
       @click="toggleDark()"

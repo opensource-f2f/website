@@ -7,40 +7,40 @@ const episodes = getAllEpisode()
 
 const { id } = defineProps<{ id: string }>()
 
-const episode = $computed(() => episodes.find((episode) => episode.id === id))
+const episode = computed(() => episodes.find((episode) => episode.id === id))
 
 function isAudio(url: string) {
   const audioFormats = ['mp3', 'm4a']
   return audioFormats.some((format) => url.endsWith(`.${format}`))
 }
 
-if (episode)
+if (episode.value)
   useHead({
-    title: episode.title,
+    title: episode.value.title,
     meta: [
       {
         name: 'description',
-        content: episode.description || episode.title || '',
+        content: episode.value.description || episode.value.title || '',
       },
-      { property: 'og:title', content: episode.title },
+      { property: 'og:title', content: episode.value.title },
       {
         property: 'og:description',
-        content: episode.description || episode.title || '',
+        content: episode.value.description || episode.value.title || '',
       },
       {
         property: 'og:url',
-        content: `https://osf2f.net/episode/${episode.id}`,
+        content: `https://osf2f.net/episode/${episode.value.id}`,
       },
     ],
   })
 </script>
 
 <template>
-  <div v-if="episode" container mx-auto px-4 mt-5>
+  <div v-if="episode" mx-auto mt-5 px-4 container>
     <div mb-5>
-      <h1 text-center text-2xl font-bold mb-2 v-html="episode.title" />
+      <h1 mb-2 text-center text-2xl font-bold v-html="episode.title" />
       <div v-if="isAudio(episode.link)">
-        <figure box-border my-2>
+        <figure my-2 box-border>
           <audio
             controls
             :src="episode.link"

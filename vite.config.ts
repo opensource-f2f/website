@@ -4,7 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Inspect from 'vite-plugin-inspect'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -14,9 +14,8 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
-      reactivityTransform: true,
     }),
-    Markdown(),
+    Markdown({}),
     Components({
       dts: path.resolve(pathSrc, 'typings/components.d.ts'),
     }),

@@ -1,13 +1,13 @@
 <template>
-  <footer text-center py-6 leading-7>
+  <footer py-6 text-center leading-7>
     <div py-2>
       <a
         href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss"
         target="_blank"
       >
         <img
-          max-h-9
           ma
+          max-h-9
           src="/static/powered-by-vercel.svg"
           alt="Powered by vercel"
         />

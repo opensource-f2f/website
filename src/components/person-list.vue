@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getPersonKey } from '../utils/episode'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+// eslint-disable-next-line no-duplicate-imports, @typescript-eslint/consistent-type-imports
 import type { Person } from '../utils/episode'
 
 const { persons } = defineProps<{

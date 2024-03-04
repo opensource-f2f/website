@@ -8,27 +8,27 @@ const { github } = defineProps<{
   github: string
 }>()
 
-const contributor = $computed(() =>
+const contributor = computed(() =>
   contributors.find((contributor) => contributor.github === github)
 )
 
-if (contributor)
+if (contributor.value)
   useHead({
-    title: contributor.name,
+    title: contributor.value.name,
     meta: [
-      { property: 'og:title', content: contributor.name },
+      { property: 'og:title', content: contributor.value.name },
       {
         property: 'og:url',
-        content: `https://osf2f.net/contributor/${contributor.github}`,
+        content: `https://osf2f.net/contributor/${contributor.value.github}`,
       },
     ],
   })
 </script>
 
 <template>
-  <div v-if="contributor" container mx-auto px-4 mt-5>
+  <div v-if="contributor" mx-auto mt-5 px-4 container>
     <div mb-5>
-      <h1 text-center text-2xl font-bold mb-2 v-html="contributor.name" />
+      <h1 mb-2 text-center text-2xl font-bold v-html="contributor.name" />
 
       <a :href="`https://github.com/${contributor.github}`" target="_blank">
         <img
