@@ -37,6 +37,9 @@ devDependencies:
   '@sxzz/eslint-config':
     specifier: ^3.8.5
     version: 3.8.5(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)(typescript@5.3.3)
+  '@sxzz/prettier-config':
+    specifier: ^2.0.1
+    version: 2.0.1
   '@types/node':
     specifier: ^20.11.24
     version: 20.11.24
@@ -52,6 +55,9 @@ devDependencies:
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -1914,6 +1920,10 @@ packages:
       - svelte
       - svelte-eslint-parser
       - typescript
+    dev: true
+
+  /@sxzz/prettier-config@2.0.1:
+    resolution: {integrity: sha512-zGYhhlS+yHd6aoR9UOPzDn0NqmqTsDkLj9yStM03Y7LJowxemRduyrCwnpSRNgzNSvsKJ6dw8upNyC5LttKyIg==}
     dev: true
 
   /@types/estree@0.0.39:

@@ -26,11 +26,13 @@
   "devDependencies": {
     "@iconify/json": "^2.2.189",
     "@sxzz/eslint-config": "^3.8.5",
+    "@sxzz/prettier-config": "^2.0.1",
     "@types/node": "^20.11.24",
     "@unocss/reset": "^0.58.5",
     "@unocss/transformer-directives": "^0.58.5",
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
     "typescript": "^5.3.3",
     "unocss": "^0.58.5",
     "unplugin-auto-import": "^0.17.5",
@@ -40,5 +42,6 @@
     "vite-plugin-inspect": "^0.8.3",
     "vite-plugin-pwa": "^0.19.2",
     "vue-tsc": "^2.0.4"
-  }
+  },
+  "prettier": "@sxzz/prettier-config"
 }

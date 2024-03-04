@@ -15,7 +15,7 @@ const episodes = computed(() =>
     } else {
       return b.date.getTime() - a.date.getTime()
     }
-  })
+  }),
 )
 </script>
 

@@ -18,5 +18,5 @@ export interface RawContributor {
 
 export const getAllContributors = () =>
   Object.values(
-    import.meta.glob<RawContributor>('../contributors/*.md', { eager: true })
+    import.meta.glob<RawContributor>('../contributors/*.md', { eager: true }),
   )

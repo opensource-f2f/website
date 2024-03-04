@@ -44,7 +44,7 @@ for (const { id } of getAllEpisode()) {
       import('./components/episode-content.vue').then(
         ({ default: EpisodeContent }) => {
           return h(EpisodeContent, { id })
-        }
+        },
       ),
   })
 }
@@ -56,7 +56,7 @@ for (const { github } of getAllContributors()) {
       import('./components/contributor-content.vue').then(
         ({ default: ContributorContent }) => {
           return h(ContributorContent, { github })
-        }
+        },
       ),
   })
 }

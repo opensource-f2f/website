@@ -20,13 +20,13 @@ export interface Episode extends Omit<RawEpisode, 'date'> {
 
 export const getAllEpisode = () =>
   Object.values(
-    import.meta.glob<RawEpisode>('../episodes/*.md', { eager: true })
+    import.meta.glob<RawEpisode>('../episodes/*.md', { eager: true }),
   ).map(
     (module): Episode => ({
       ...module,
       id: module.num,
       date: new Date(module.date),
-    })
+    }),
   )
 
 export const getPersonKey = (person: Person) =>

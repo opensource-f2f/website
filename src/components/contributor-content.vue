@@ -9,7 +9,7 @@ const { github } = defineProps<{
 }>()
 
 const contributor = computed(() =>
-  contributors.find((contributor) => contributor.github === github)
+  contributors.find((contributor) => contributor.github === github),
 )
 
 if (contributor.value)
