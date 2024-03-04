@@ -8,7 +8,7 @@
         <img
           max-h-9
           ma
-          src="../assets/powered-by-vercel.svg"
+          src="/static/powered-by-vercel.svg"
           alt="Powered by vercel"
         />
       </a>

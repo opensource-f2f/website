@@ -18,7 +18,7 @@ const toggleDark = useToggle(isDark)
           w-100px
           h-100px
           rounded-2
-          src="../assets/logo.png"
+          src="/static/logo.png"
           alt="开源面对面"
         />
       </router-link>
@@ -62,7 +62,7 @@ const toggleDark = useToggle(isDark)
           />
         </a>
         <a target="_blank" href="https://music.163.com/#/djradio?id=1001312291">
-          <img h-20px alt="NetEase Music" src="../assets/netease-music.svg" />
+          <img h-20px alt="NetEase Music" src="/static/netease-music.svg" />
         </a>
       </div>
     </div>

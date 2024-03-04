@@ -1,36 +1,44 @@
-[{
+[
+  {
     "name": "黄英男",
     "source": "小宇宙",
     "date": "2023-12-9",
     "item": "2元"
-}, {
+  },
+  {
     "name": "Rick",
     "source": "爱发电",
     "date": "2022-02-14",
     "item": "5元"
-}, {
+  },
+  {
     "name": "wey-gu",
     "source": "爱发电",
     "date": "2022-02-14",
     "item": "10元"
-}, {
+  },
+  {
     "name": "siwei",
     "source": "爱发电",
     "date": "2022-02-14",
     "item": "15元"
-}, {
+  },
+  {
     "name": "siwei",
     "source": "微信",
     "date": "2023-10-25",
     "item": "21元"
-}, {
+  },
+  {
     "name": "Rick",
     "source": "微信",
     "date": "2023-10-25",
     "item": "23元"
-}, {
+  },
+  {
     "name": "majingh",
     "source": "微信",
     "date": "2023-10-25",
     "item": "23元"
-}]
+  }
+]
