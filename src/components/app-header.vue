@@ -70,7 +70,7 @@ const toggleDark = useToggle(isDark)
             h-15px
             mt-3px
             alt="NetEase Music"
-            src="../assets/NetEase-music.svg"
+            src="../assets/netease-music.svg"
           />
         </a>
       </div>
