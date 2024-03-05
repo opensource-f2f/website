@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@element-plus/icons-vue':
+    specifier: ^2.3.1
+    version: 2.3.1(vue@3.4.21)
   '@giscus/vue':
     specifier: ^3.0.0
     version: 3.0.0(vue@3.4.21)
