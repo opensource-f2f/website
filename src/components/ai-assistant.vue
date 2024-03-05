@@ -5,7 +5,7 @@ import { ElPopover } from 'element-plus'
 </script>
 
 <template>
-  <div flex="~ col" items-center fixed right-7 top-120 cursor-pointer>
+  <div flex="~ col" fixed right-7 top-120 cursor-pointer items-center>
     <div flex="~" items-end>
       <a
         class="ai-assistant-img"
