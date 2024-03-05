@@ -8,6 +8,7 @@ useHead({
 
 <template>
   <app-header />
+  <ai-assistant />
   <router-view v-slot="{ Component }">
     <Transition>
       <component :is="Component" />

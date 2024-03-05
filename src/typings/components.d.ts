@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AiAssistant: typeof import('./../components/ai-assistant.vue')['default']
     AppFooter: typeof import('./../components/app-footer.vue')['default']
     AppHeader: typeof import('./../components/app-header.vue')['default']
     Badge: typeof import('./../components/badge.vue')['default']
