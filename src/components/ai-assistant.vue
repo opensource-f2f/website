@@ -43,7 +43,8 @@ import { ElPopover } from 'element-plus'
     </div>
 
     <a
-      text="AI小助手"
+      class="textsdsd"
+      text="@ AI小助手"
       target="_blank"
       href="https://chatglm.cn/main/gdetail/65d70a301e6bc1f647c934e3"
     />
