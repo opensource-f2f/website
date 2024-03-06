@@ -69,7 +69,7 @@ const toggleDark = useToggle(isDark)
         </a>
 
         <Menu>
-          <div i-carbon-logo-wechat text="#2aae67" text-20px cursor-pointer />
+          <div text="#2aae67" i-carbon-logo-wechat cursor-pointer text-20px />
           <template #popper>
             <div flex="~ col" m-10px>
               <img
