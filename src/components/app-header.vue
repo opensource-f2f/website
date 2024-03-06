@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { ElIcon } from 'element-plus'
-import { HomeFilled } from '@element-plus/icons-vue'
-
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
@@ -81,7 +78,7 @@ const toggleDark = useToggle(isDark)
 
     <router-link to="/">
       <div absolute left-5 top-5 cursor-pointer text="black 2xl">
-        <el-icon color="var(--text-color)"><HomeFilled /></el-icon>
+        <div i-carbon-home text="[var(--text-color)]" />
       </div>
     </router-link>
   </header>

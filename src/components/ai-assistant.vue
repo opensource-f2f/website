@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import 'element-plus/theme-chalk/base.css'
 import 'element-plus/theme-chalk/el-popover.css'
-import { ElIcon, ElPopover } from 'element-plus'
-import { CircleClose } from '@element-plus/icons-vue'
+import { ElPopover } from 'element-plus'
 
 const isShow = ref(true)
 </script>
@@ -10,9 +9,12 @@ const isShow = ref(true)
 <template>
   <div flex="~ col" fixed right-10 top-120 cursor-pointer items-center>
     <div v-if="isShow">
-      <el-icon :size="20" position-absolute right-0 @click="isShow = false">
-        <CircleClose />
-      </el-icon>
+      <div
+        i-carbon-close-outline
+        position-absolute
+        right-0
+        @click="isShow = false"
+      />
       <div flex="~" items-end>
         <a
           class="ai-assistant-img"
