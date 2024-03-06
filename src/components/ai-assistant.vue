@@ -17,7 +17,7 @@ const isShow = ref(true)
         target="_blank"
         href="https://chatglm.cn/main/gdetail/65d70a301e6bc1f647c934e3"
       >
-        <img w-80px alt="NetEase Music" src="/static/ai-assistant.png" />
+        <img w-80px alt="AI Assistant" src="/static/ai-assistant.png" />
       </a>
       <a
         text="@ AI小助手"
