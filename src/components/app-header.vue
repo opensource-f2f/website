@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Menu } from 'floating-vue'
+import 'floating-vue/dist/style.css'
+
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
@@ -64,6 +67,19 @@ const toggleDark = useToggle(isDark)
         <a target="_blank" href="https://music.163.com/#/djradio?id=1001312291">
           <img h-20px alt="NetEase Music" src="/static/netease-music.svg" />
         </a>
+
+        <Menu>
+          <div text="#2aae67" i-carbon-logo-wechat cursor-pointer text-20px />
+          <template #popper>
+            <div flex="~ col" m-10px>
+              <img
+                h-150px
+                alt="Weixin Offcial Accounts Platform"
+                src="/static/we-chat.jpeg"
+              />扫一扫 关注微信公众号
+            </div>
+          </template>
+        </Menu>
       </div>
     </div>
     <div
@@ -75,5 +91,11 @@ const toggleDark = useToggle(isDark)
       text="black 2xl"
       @click="toggleDark()"
     />
+
+    <router-link to="/">
+      <div absolute left-5 top-5 cursor-pointer text="black 2xl">
+        <div i-carbon-home text="[var(--text-color)]" />
+      </div>
+    </router-link>
   </header>
 </template>
