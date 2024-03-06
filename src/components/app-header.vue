@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Menu } from 'floating-vue'
+import 'floating-vue/dist/style.css'
+
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
@@ -64,6 +67,19 @@ const toggleDark = useToggle(isDark)
         <a target="_blank" href="https://music.163.com/#/djradio?id=1001312291">
           <img h-20px alt="NetEase Music" src="/static/netease-music.svg" />
         </a>
+
+        <Menu>
+          <div i-carbon-logo-wechat text="#2aae67" text-20px cursor-pointer />
+          <template #popper>
+            <div flex="~ col" m-10px>
+              <img
+                h-150px
+                alt="NetEase Music"
+                src="/static/we-chat.jpeg"
+              />扫一扫 关注微信公众号
+            </div>
+          </template>
+        </Menu>
       </div>
     </div>
     <div
