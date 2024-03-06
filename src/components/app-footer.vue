@@ -20,6 +20,19 @@
       <a href="https://github.com/kang8" target="_blank">Kang</a>
       and <a href="https://github.com/sxzz" target="_blank">三咲智子</a>
     </p>
+    <p text-sm>
+      <a
+        text="AI小助手"
+        target="_blank"
+        href="https://mastergo.com/community/resource/9252?from=card"
+      />
+      by
+      <a
+        text="「知识共享 - 署名 4.0」"
+        target="_blank"
+        href="https://creativecommons.org/licenses/by/4.0/"
+      />
+    </p>
     <p>
       Made by
       <a href="https://github.com/sxzz" target="_blank">三咲智子</a> with ❤️
