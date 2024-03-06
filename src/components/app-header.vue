@@ -74,7 +74,7 @@ const toggleDark = useToggle(isDark)
             <div flex="~ col" m-10px>
               <img
                 h-150px
-                alt="NetEase Music"
+                alt="Weixin Offcial Accounts Platform"
                 src="/static/we-chat.jpeg"
               />扫一扫 关注微信公众号
             </div>
