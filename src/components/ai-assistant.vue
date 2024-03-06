@@ -1,46 +1,48 @@
 <script setup lang="ts">
-const isShow = ref(true)
+const isShow = useLocalStorage('display-ai-assistant', true)
 </script>
 
 <template>
-  <div flex="~ col" fixed right-10 top-120 cursor-pointer items-center>
-    <div v-if="isShow">
-      <div
-        i-carbon-close-outline
-        position-absolute
-        right-0
-        @click="isShow = false"
-      />
+  <div
+    flex="~ col"
+    fixed
+    bottom-10
+    right-10
+    cursor-pointer
+    items-center
+    justify-center
+  >
+    <div v-if="isShow" flex="~ col" justify-center>
+      <div flex>
+        <a
+          class="ai-assistant-img"
+          w-70px
+          target="_blank"
+          href="https://chatglm.cn/main/gdetail/65d70a301e6bc1f647c934e3"
+        >
+          <img w-80px alt="AI Assistant" src="/static/ai-assistant.png" />
+        </a>
+        <div i-carbon-close-outline @click="isShow = false" />
+      </div>
       <a
-        class="ai-assistant-img"
-        w-70px
-        target="_blank"
-        href="https://chatglm.cn/main/gdetail/65d70a301e6bc1f647c934e3"
-      >
-        <img w-80px alt="AI Assistant" src="/static/ai-assistant.png" />
-      </a>
-      <a
-        text="@ AI小助手"
         target="_blank"
         mr-8px
         href="https://chatglm.cn/main/gdetail/65d70a301e6bc1f647c934e3"
-      />
+        >AI 小助手</a
+      >
     </div>
 
-    <span v-else class="min-icon" @click="isShow = true">AI</span>
+    <span
+      v-else
+      bg="#d4ebcb"
+      border="1px [var(--text-color)]"
+      h-7
+      w-7
+      rounded-full
+      text-center
+      color-black
+      @click="isShow = true"
+      >AI</span
+    >
   </div>
 </template>
-
-<style scoped>
-.min-icon {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  line-height: 25px;
-  font-size: 14px;
-  text-align: center;
-  border: 1px solid var(--text-color);
-  color: #000;
-  background-color: #d4ebcb;
-}
-</style>
