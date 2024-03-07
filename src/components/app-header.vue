@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { Menu } from 'floating-vue'
 import 'floating-vue/dist/style.css'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -82,20 +79,5 @@ const toggleDark = useToggle(isDark)
         </Menu>
       </div>
     </div>
-    <div
-      absolute
-      right-5
-      top-5
-      cursor-pointer
-      i="dark:carbon-moon carbon-sun"
-      text="black 2xl"
-      @click="toggleDark()"
-    />
-
-    <router-link to="/">
-      <div absolute left-5 top-5 cursor-pointer text="black 2xl">
-        <div i-carbon-home text="[var(--text-color)]" />
-      </div>
-    </router-link>
   </header>
 </template>
