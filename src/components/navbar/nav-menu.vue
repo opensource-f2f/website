@@ -9,10 +9,10 @@ const list = ref([
 <template>
   <nav flex>
     <a
-      ml-20px
-      style="color: var(--text-color)"
       v-for="(item, key) in list"
       :key="key"
+      ml-20px
+      style="color: var(--text-color)"
       :item="item"
       :href="item.value"
     >

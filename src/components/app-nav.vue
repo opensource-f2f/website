@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const isFullScreen = ref(true)
 
-const toggleFullScreen = () => {
-  console.log('toggleFullScreen')
-}
+const toggleFullScreen = () => {}
 </script>
 
 <template>
