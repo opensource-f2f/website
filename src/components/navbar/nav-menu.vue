@@ -1,15 +1,22 @@
 <script setup lang="ts">
 const list = ref([
-  { name: '首页', value: '/' },
   { name: '活动', value: '/' },
+  { name: 'Our Sponsors', value: '/sponsors' },
   { name: '关于我们', value: '/' },
 ])
 </script>
 
 <template>
   <nav flex>
-    <div v-for="(item, key) in list" :key="key" :item="item" ml-20px>
+    <a
+      ml-20px
+      style="color: var(--text-color)"
+      v-for="(item, key) in list"
+      :key="key"
+      :item="item"
+      :href="item.value"
+    >
       {{ item.name }}
-    </div>
+    </a>
   </nav>
 </template>

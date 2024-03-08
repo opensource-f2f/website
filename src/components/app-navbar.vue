@@ -42,8 +42,6 @@ const toggleDark = useToggle(isDark)
 <style scoped>
 .navbar-wrapper {
   position: relative;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
   height: 60px;
   padding: 0 24px;
 }

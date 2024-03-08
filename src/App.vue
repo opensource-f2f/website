@@ -7,7 +7,6 @@ useHead({
 </script>
 
 <template>
-  <app-nav />
   <app-header />
   <ai-assistant />
   <router-view v-slot="{ Component }">
