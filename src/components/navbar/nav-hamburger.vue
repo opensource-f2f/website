@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { menuList } from '../../utils/store-data'
-
-const isShowMenu = ref(false)
+import { menuList, isShowMenu } from '../../utils/store-data'
 </script>
 
 <template>

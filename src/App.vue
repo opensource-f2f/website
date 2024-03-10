@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { isShowMenu } from './utils/store-data'
 
 useHead({
   titleTemplate: (title) => (title ? `${title} | 开源面对面` : '开源面对面'),
@@ -9,7 +10,7 @@ useHead({
 <template>
   <app-header />
   <ai-assistant />
-  <router-view v-slot="{ Component }">
+  <router-view v-slot="{ Component }" v-show="!isShowMenu">
     <Transition>
       <component :is="Component" />
     </Transition>
