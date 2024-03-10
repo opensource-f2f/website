@@ -6,7 +6,7 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <div relative px-20px>
+  <div px-20px>
     <div flex>
       <!-- logo -->
       <div h-60px flex items-center>

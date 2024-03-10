@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { menuList, isShowMenu } from '../../utils/store-data'
+import { isShowMenu, menuList } from '../../utils/store-data'
 </script>
 
 <template>

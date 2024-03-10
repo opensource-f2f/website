@@ -10,7 +10,7 @@ useHead({
 <template>
   <app-header />
   <ai-assistant />
-  <router-view v-slot="{ Component }" v-show="!isShowMenu">
+  <router-view v-show="!isShowMenu" v-slot="{ Component }">
     <Transition>
       <component :is="Component" />
     </Transition>
