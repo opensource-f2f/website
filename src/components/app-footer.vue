@@ -38,9 +38,6 @@
       <a href="https://github.com/sxzz" target="_blank">三咲智子</a> with ❤️
     </p>
     <p>
-      <a href="/sponsors" target="_blank">Our Sponsors</a>
-    </p>
-    <p>
       <a href="https://github.com/opensource-f2f" target="_blank">开源面对面</a>
       &copy; 2022
 
