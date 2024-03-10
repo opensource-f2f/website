@@ -1,20 +1,16 @@
 <script setup lang="ts">
-const list = ref([
-  { name: '活动', value: '/' },
-  { name: 'Our Sponsors', value: '/sponsors' },
-  { name: '关于我们', value: '/' },
-])
+import { menuList } from '../../utils/store-data'
 </script>
 
 <template>
   <nav flex>
     <a
-      v-for="(item, key) in list"
+      v-for="(item, key) in menuList"
       :key="key"
       ml-20px
       style="color: var(--text-color)"
       :item="item"
-      :href="item.value"
+      :href="item.href"
     >
       {{ item.name }}
     </a>

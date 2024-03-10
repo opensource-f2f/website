@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import { isLargeScreen } from '../utils/store-data'
+
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <div class="navbar-wrapper">
-    <div class="header-container">
+  <div relative px-20px>
+    <div flex>
       <!-- logo -->
-      <div class="logo-container">
+      <div h-60px flex items-center>
         <router-link to="/">
           <div cursor-pointer text="black 2xl">
             <div i-carbon-home text="[var(--text-color)]" />
@@ -15,13 +17,16 @@ const toggleDark = useToggle(isDark)
         </router-link>
       </div>
 
-      <div class="content">
+      <div class="content" flex flex-grow-1 items-center flex-justify-end>
         <!-- menu -->
-        <NavMenu class="menu" />
+        <NavMenu v-if="isLargeScreen" class="menu" />
+
+        <!-- search -->
+        <!-- <NavSearch /> -->
 
         <!-- theme-toggler -->
         <div
-          ml-55px
+          ml-40px
           cursor-pointer
           i="dark:carbon-moon carbon-sun"
           text="black 2xl"
@@ -34,32 +39,10 @@ const toggleDark = useToggle(isDark)
             <div i-carbon-logo-github text="[var(--text-color)]" />
           </div>
         </a>
+
+        <!-- collapsible menu -->
+        <NavHamburger v-if="!isLargeScreen" />
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.navbar-wrapper {
-  position: relative;
-  height: 60px;
-  padding: 0 24px;
-}
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  height: 60px;
-}
-.content {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  flex-grow: 1;
-}
-</style>

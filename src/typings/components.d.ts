@@ -19,6 +19,7 @@ declare module 'vue' {
     EpisodeContent: typeof import('./../components/episode-content.vue')['default']
     EpisodeItem: typeof import('./../components/episode-item.vue')['default']
     EpisodeMeta: typeof import('./../components/episode-meta.vue')['default']
+    NavHamburger: typeof import('./../components/navbar/nav-hamburger.vue')['default']
     NavMenu: typeof import('./../components/navbar/nav-menu.vue')['default']
     NavSearch: typeof import('./../components/navbar/nav-search.vue')['default']
     NotFound: typeof import('./../components/not-found.vue')['default']
