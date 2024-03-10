@@ -14,7 +14,7 @@ const isShowMenu = ref(false)
   />
   <div
     v-if="isShowMenu"
-    class="menu"
+    style="background-color: var(--bg)"
     flex="~ col"
     fixed
     left-0
@@ -28,7 +28,7 @@ const isShowMenu = ref(false)
     <div
       v-for="(item, key) in menuList"
       :key="key"
-      class="menu-item"
+      style="border-bottom: 1px solid var(--border-color)"
       border-bottom="1px solid [var(--border-color)]"
       p-10px
       text-center
@@ -45,12 +45,3 @@ const isShowMenu = ref(false)
     </div>
   </div>
 </template>
-
-<style scoped>
-.menu {
-  background-color: var(--bg);
-}
-.menu-item {
-  border-bottom: 1px solid var(--border-color);
-}
-</style>
