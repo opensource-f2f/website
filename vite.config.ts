@@ -7,6 +7,7 @@ import UnoCSS from 'unocss/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Inspect from 'vite-plugin-inspect'
 import { VitePWA } from 'vite-plugin-pwa'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -63,5 +64,6 @@ export default defineConfig({
         clientsClaim: true,
       },
     }),
+    VueDevTools(),
   ],
 })
