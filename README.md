@@ -26,7 +26,7 @@ pnpm dev
 
 ## License
 
-[Apache License 2.0](./LICENSE) © 2022 [OpenSource F2F](https://github.com/opensource-f2f)
+[Apache License 2.0](./LICENSE) © 2024 [OpenSource F2F](https://github.com/opensource-f2f)
 
 <a href="https://vercel.com/?utm_source=open-source-f2f&utm_campaign=oss">
   <img src="./public/static/powered-by-vercel.svg" />

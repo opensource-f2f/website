@@ -39,7 +39,7 @@
     </p>
     <p>
       <a href="https://github.com/opensource-f2f" target="_blank">开源面对面</a>
-      &copy; 2022
+      &copy; 2024
 
       <a href="https://beian.miit.gov.cn/" target="_blank"
         >京ICP备2022023077号-1</a
