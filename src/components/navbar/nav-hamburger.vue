@@ -1,46 +1,49 @@
 <script setup lang="ts">
-import { isShowMenu, menuList } from '../../utils/store-data'
+import { isShowMenu, menus } from '../../utils/menu'
+
+const router = useRouter()
+router.afterEach(() => {
+  isShowMenu.value = false
+})
 </script>
 
 <template>
   <div
-    ml-20px
     cursor-pointer
+    text-2xl
     sm-hidden
-    :i="isShowMenu ? 'carbon-close' : 'carbon-menu'"
-    text=" 2xl"
+    :class="isShowMenu ? 'i-carbon-close' : 'i-carbon-menu'"
     @click="isShowMenu = !isShowMenu"
   />
-  <div
-    v-show="isShowMenu"
-    style="background-color: var(--bg)"
-    flex="~ col"
-    fixed
-    left-0
-    top-60px
-    z-999
-    h-full
-    w-full
-    px-50px
-    py-10px
-  >
+  <Transition>
     <div
-      v-for="(item, key) in menuList"
-      :key="key"
-      style="border-bottom: 1px solid var(--border-color)"
-      border-bottom="1px solid [var(--border-color)]"
-      p-10px
-      text-center
+      v-show="isShowMenu"
+      flex="~ col gap2"
+      bg="[var(--bg)]"
+      fixed
+      left-0
+      top-60px
+      z-999
+      h-full
+      w-full
+      px-50px
+      py-10px
+      duration="150!"
     >
-      <a
+      <router-link
+        v-for="(item, key) in menus"
         :key="key"
-        ml-20px
-        style="color: var(--text-color)"
-        :item="item"
-        :href="item.href"
+        border-b="1px solid [var(--border-color)]"
+        class="text-[var(--text-color)]"
+        flex="~ gap2"
+        items-center
+        justify-center
+        p2
+        :to="item.href"
       >
-        {{ item.name }}
-      </a>
+        <div :class="item.icon" text-xl />
+        {{ item.label }}
+      </router-link>
     </div>
-  </div>
+  </Transition>
 </template>

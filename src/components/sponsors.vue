@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import sponsors from '../assets/sponsors.json'
-import { isLargeScreen } from '../utils/store-data'
 
 sponsors.sort((a, b) => {
   return Date.parse(b.date) - Date.parse(a.date)
@@ -8,10 +7,9 @@ sponsors.sort((a, b) => {
 </script>
 
 <template>
-  <div self-center>
-    <div>Sponsor list</div>
-
-    <table :style="{ width: isLargeScreen ? '600px' : '350px' }">
+  <div flex="~ col gap2" items-center p2>
+    <h1>Sponsor list</h1>
+    <table max-w-500px w-full>
       <tr>
         <td>捐赠人</td>
         <td>时间</td>

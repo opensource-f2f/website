@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { menuList } from '../../utils/store-data'
+import { menus } from '../../utils/menu'
 </script>
 
 <template>
   <nav flex>
-    <a
-      v-for="(item, key) in menuList"
+    <router-link
+      v-for="(item, key) in menus"
       :key="key"
+      :to="item.href"
+      class="text-[var(--text-color)]"
+      sm="flex flex-gap1"
       ml-20px
-      style="color: var(--text-color)"
-      :item="item"
-      :href="item.href"
+      hidden
+      items-center
     >
-      {{ item.name }}
-    </a>
+      <!-- TODO tooltip for label -->
+      <div :title="item.label" :class="item.icon" class="text-2xl" />
+    </router-link>
   </nav>
 </template>
