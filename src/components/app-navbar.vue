@@ -19,7 +19,7 @@ const toggleDark = useToggle(isDark)
 
       <div class="content" flex flex-grow-1 items-center flex-justify-end>
         <!-- menu -->
-        <NavMenu v-if="isLargeScreen" class="menu" />
+        <NavMenu v-if="isLargeScreen" />
 
         <!-- search -->
         <!-- <NavSearch /> -->
@@ -41,7 +41,7 @@ const toggleDark = useToggle(isDark)
         </a>
 
         <!-- collapsible menu -->
-        <NavHamburger v-if="!isLargeScreen" />
+        <NavHamburger />
       </div>
     </div>
   </div>

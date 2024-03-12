@@ -6,12 +6,13 @@ import { isShowMenu, menuList } from '../../utils/store-data'
   <div
     ml-20px
     cursor-pointer
+    sm-hidden
     :i="isShowMenu ? 'carbon-close' : 'carbon-menu'"
     text=" 2xl"
     @click="isShowMenu = !isShowMenu"
   />
   <div
-    v-if="isShowMenu"
+    v-show="isShowMenu"
     style="background-color: var(--bg)"
     flex="~ col"
     fixed
