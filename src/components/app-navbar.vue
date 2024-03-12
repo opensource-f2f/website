@@ -19,7 +19,7 @@ const toggleDark = useToggle(isDark)
 
       <div class="content" flex flex-grow-1 items-center flex-justify-end>
         <!-- menu -->
-        <NavMenu v-if="isLargeScreen" />
+        <NavMenu v-show="isLargeScreen" />
 
         <!-- search -->
         <!-- <NavSearch /> -->
