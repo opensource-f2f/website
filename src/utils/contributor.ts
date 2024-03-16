@@ -10,6 +10,7 @@ export interface RawContributor {
   github: string
   blog?: string
   twitter?: string
+  title?: string
   audios?: Link[]
   videos?: Link[]
   description: string
