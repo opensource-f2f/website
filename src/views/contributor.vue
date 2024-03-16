@@ -63,7 +63,7 @@ if (contributor.value)
       </div>
 
       <!-- profile -->
-      <div mt5 pb15 pt5 container border-y="1px solid [var(--border-color)]">
+      <div mt5 py5 container border-y="1px solid [var(--border-color)]">
         <component :is="contributor.default" />
       </div>
 
