@@ -62,11 +62,6 @@ if (contributor.value)
         </span>
       </div>
 
-      <!-- profile -->
-      <div mt5 py5 container border-y="1px solid [var(--border-color)]">
-        <component :is="contributor.default" />
-      </div>
-
       <!-- history -->
       <div mt5>
         <div v-if="contributor.audios">
@@ -85,6 +80,11 @@ if (contributor.value)
             }}</a>
           </li>
         </div>
+      </div>
+
+      <!-- profile -->
+      <div mt5 pb10 pt5 container border-y="1px solid [var(--border-color)]">
+        <component :is="contributor.default" />
       </div>
     </div>
   </div>
