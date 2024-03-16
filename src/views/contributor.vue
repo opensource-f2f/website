@@ -44,15 +44,15 @@ if (contributor.value)
       <span v-if="contributor.title">{{ contributor.title }}</span>
 
       <!-- social -->
-      <div>
-        <span v-if="contributor.github">
-          Github:
+      <div flex="~ row gap-2 wrap justify-center">
+        <span v-if="contributor.github" flex="~  items-center">
+          <div i-carbon-logo-github text="[var(--text-color)]" mr1 />
           <a :href="`https://github.com/${contributor.github}`" target="_blank">
             {{ contributor.github }}
           </a>
         </span>
-        <span v-if="contributor.twitter">
-          Twitter:
+        <span v-if="contributor.twitter" flex="~  items-center">
+          <div i-carbon-logo-x text="[var(--text-color)]" mr1 />
           <a
             :href="`https://twitter.com/${contributor.twitter}`"
             target="_blank"
