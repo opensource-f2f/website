@@ -67,21 +67,25 @@ if (contributor.value)
         <component :is="contributor.default" />
       </div>
 
-      <!-- audios -->
-      <span v-if="contributor.audios" mt5>
-        Podcast List:
-        <li v-for="audio in contributor.audios" :key="audio.title">
-          <a :href="`${audio.link}`" target="_blank">{{ audio.title }}</a>
-        </li>
-      </span>
-
-      <!-- videos -->
-      <span v-if="contributor.videos" mt5>
-        Video List:
-        <li v-for="video in contributor.videos" :key="video.title">
-          <a :href="`${video.link}`" target="_blank">{{ video.title }}</a>
-        </li>
-      </span>
+      <!-- history -->
+      <div mt5>
+        <div v-if="contributor.audios">
+          Podcast List:
+          <li v-for="audio in contributor.audios" :key="audio.title">
+            <a :href="`${audio.link}`" target="_blank" break-all>{{
+              audio.title
+            }}</a>
+          </li>
+        </div>
+        <div v-if="contributor.videos" mt2>
+          Video List:
+          <li v-for="video in contributor.videos" :key="video.title">
+            <a :href="`${video.link}`" target="_blank" break-all>{{
+              video.title
+            }}</a>
+          </li>
+        </div>
+      </div>
     </div>
   </div>
 </template>
