@@ -9,9 +9,7 @@ const toggleDark = useToggle(isDark)
       <!-- logo -->
       <div h-60px flex items-center>
         <router-link to="/">
-          <div cursor-pointer text="black 2xl">
-            <div i-carbon-home text="[var(--text-color)]" />
-          </div>
+          <div i-carbon-home cursor-pointer text-2xl text-black />
         </router-link>
       </div>
 
@@ -25,15 +23,13 @@ const toggleDark = useToggle(isDark)
         <div
           cursor-pointer
           i="dark:carbon-moon carbon-sun"
-          text="black 2xl"
+          text="black! 2xl"
           @click="toggleDark()"
         />
 
         <!-- github -->
         <a target="_blank" href="https://github.com/opensource-f2f">
-          <div text="black 2xl" cursor-pointer>
-            <div i-carbon-logo-github text="[var(--text-color)]" />
-          </div>
+          <div i-carbon-logo-github cursor-pointer text-2xl text-black />
         </a>
 
         <!-- collapsible menu -->
