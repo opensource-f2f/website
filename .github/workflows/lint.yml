@@ -10,17 +10,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
+      - uses: actions/checkout@v4
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - run: corepack enable
+
+      - name: Set node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
 
       - name: Install
-        run: nci
+        run: pnpm i
 
       - name: Lint
-        run: nr lint --max-warnings 0 --exit-on-fatal-error
+        run: pnpm run lint --max-warnings 0 --exit-on-fatal-error
