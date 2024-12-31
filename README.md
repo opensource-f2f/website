@@ -6,7 +6,7 @@
 
 Please make sure your development environment meets the following requirements:
 
-- Node.js version >= `v14.19`, you could install a specific version via [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://fnm.vercel.app/)
+- Node.js LTS version. You could install a specific version via [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://fnm.vercel.app/)
 
 ```bash
 # 安装依赖包
