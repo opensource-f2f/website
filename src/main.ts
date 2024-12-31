@@ -1,16 +1,16 @@
+import { isClient } from '@vueuse/core'
 import { ViteSSG } from 'vite-ssg'
 import { h } from 'vue'
-import { isClient } from '@vueuse/core'
 import App from './App.vue'
+import { getAllContributors } from './utils/contributor'
 import { getAllEpisode } from './utils/episode'
 import { detectFont } from './utils/font'
-import { getAllContributors } from './utils/contributor'
 
 import type { RouteRecordRaw } from 'vue-router'
 
+import 'github-markdown-css'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import 'github-markdown-css'
 import './styles/global.css'
 
 const routes: RouteRecordRaw[] = [

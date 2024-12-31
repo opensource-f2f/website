@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { isClient } from '@vueuse/core'
 import { useHead } from '@unhead/vue'
+import { isClient } from '@vueuse/core'
 
 const path = isClient ? location.pathname : ''
 
