@@ -4,12 +4,20 @@ import { getAllEpisode } from '../utils/episode'
 const rawEpisodes = Object.values(getAllEpisode())
 
 const sort = ref<'asc' | 'desc'>('desc')
-const selectedYear = ref<number | null>(null)
+const selectedYear = useLocalStorage<number | null>('year-filter', null)
 
 const availableYears = computed(() => {
-  const years = new Set(rawEpisodes.map(e => e.date.getFullYear()))
-  return Array.from(years).sort((a, b) => b - a)
+  const yearCounts = new Map<number, number>()
+  rawEpisodes.forEach(e => {
+    const year = e.date.getFullYear()
+    yearCounts.set(year, (yearCounts.get(year) || 0) + 1)
+  })
+  return Array.from(yearCounts.entries())
+    .map(([year, count]) => ({ year, count }))
+    .sort((a, b) => b.year - a.year)
 })
+
+const totalCount = computed(() => rawEpisodes.length)
 
 const handleSort = () => {
   sort.value = sort.value === 'asc' ? 'desc' : 'asc'
@@ -44,10 +52,10 @@ const episodes = computed(() =>
           ]"
           @click="handleYearFilter(null)"
         >
-          全部
+          全部 <span op-60 text-xs>({{ totalCount }})</span>
         </button>
         <button
-          v-for="year in availableYears"
+          v-for="{ year, count } in availableYears"
           :key="year"
           :class="[
             'year-chip',
@@ -55,7 +63,7 @@ const episodes = computed(() =>
           ]"
           @click="handleYearFilter(year)"
         >
-          {{ year }}
+          {{ year }} <span op-60 text-xs>({{ count }})</span>
         </button>
       </div>
       <div
